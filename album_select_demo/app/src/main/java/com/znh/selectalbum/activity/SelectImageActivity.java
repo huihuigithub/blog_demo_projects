@@ -1,12 +1,15 @@
 package com.znh.selectalbum.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.provider.MediaStore;
+import android.support.v4.content.FileProvider;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -135,10 +138,20 @@ public class SelectImageActivity extends Activity implements AdapterView.OnItemC
         Intent openCameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         String fileName = String.valueOf(System.currentTimeMillis());
         File file = new File(mImageHelper.getPhotoImagePath(fileName, this));
-        uri = Uri.fromFile(file);
+        uri = getUriForFile(file);
         openCameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
         filePath = file.getAbsolutePath();
         startActivityForResult(openCameraIntent, 100);
+    }
+
+    private Uri getUriForFile(File file) {
+        Uri uri;
+        if (Build.VERSION.SDK_INT >= 24) {
+            uri = FileProvider.getUriForFile(getApplicationContext(), "com.znh.selectalbum.fileprovider", file);
+        } else {
+            uri = Uri.fromFile(file);
+        }
+        return uri;
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
