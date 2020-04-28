@@ -9,3 +9,6 @@
    
 3、custom_camera_demo项目
    自定义相机
+   
+4、custom_view_demo项目
+   自定义控件案例，包含自定义进度条和自定义流式布局
