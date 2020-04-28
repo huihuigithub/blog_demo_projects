@@ -1,8 +1,12 @@
 package com.znh.selectalbum.activity;
 
+import android.Manifest;
 import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.graphics.Rect;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -14,6 +18,8 @@ import com.znh.selectalbum.R;
 import com.znh.selectalbum.adapter.HomeRvAdapter;
 import com.znh.selectalbum.utils.ClickUtils;
 import com.znh.selectalbum.utils.IntentUtils;
+
+import java.util.concurrent.Executors;
 
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -28,6 +34,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        requestFilePermission(this);
         init();
     }
 
@@ -110,5 +117,33 @@ public class MainActivity extends Activity implements View.OnClickListener {
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    /**
+     * 申请文件读取权限
+     *
+     * @param activity
+     * @return
+     */
+    public boolean requestFilePermission(final Activity activity) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (activity.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                //异步发起权限请求，防止界面锁死
+                new AsyncTask<String, Integer, Object>() {
+                    @Override
+                    protected Object doInBackground(String... params) {
+                        activity.requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
+                        return null;
+                    }
+
+                    @Override
+                    protected void onPostExecute(Object o) {
+
+                    }
+                }.executeOnExecutor(Executors.newCachedThreadPool());
+                return false;
+            }
+        }
+        return true;
     }
 }

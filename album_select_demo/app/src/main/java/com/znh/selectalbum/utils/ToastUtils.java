@@ -2,7 +2,7 @@ package com.znh.selectalbum.utils;
 
 import android.widget.Toast;
 
-import com.znh.selectalbum.application.ProjiectApplication;
+import com.znh.selectalbum.application.ProjectApplication;
 
 
 /**
@@ -14,6 +14,6 @@ public class ToastUtils {
      * 普通的toast提示
      */
     public static void showToast(String msg) {
-        Toast.makeText(ProjiectApplication.getmContext(), msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(ProjectApplication.getmContext(), msg, Toast.LENGTH_SHORT).show();
     }
 }

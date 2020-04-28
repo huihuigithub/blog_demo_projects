@@ -106,9 +106,9 @@ public class ImageHelper {
     private void buildImagesList() {
         mImageItemList = new ArrayList<>();
         getThumbnail();
-        String columns[] = new String[]{Media._ID, Media.DATA};
+        String[] columns = new String[]{Media._ID, Media.DATA};
         Cursor cur = mContentResolver.query(Media.EXTERNAL_CONTENT_URI, columns, null, null, null);
-        if (cur.moveToFirst()) {
+        if (cur != null && cur.moveToFirst()) {
             int photoIDIndex = cur.getColumnIndexOrThrow(Media._ID);
             int photoPathIndex = cur.getColumnIndexOrThrow(Media.DATA);
 
@@ -124,6 +124,9 @@ public class ImageHelper {
                     mImageItemList.add(imageItem);
                 }
             } while (cur.moveToNext());
+        }
+        if (cur != null) {
+            cur.close();
         }
     }
 
