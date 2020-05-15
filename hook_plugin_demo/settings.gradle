@@ -1,0 +1,3 @@
+rootProject.name='hook_plugin_demo'
+include ':app'
+include ':plugin_app'
