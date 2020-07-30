@@ -1,0 +1,19 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //添加注解处理器依赖
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    //gradle5.0及以上需要
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+
+    //添加自定义的注解类依赖
+    implementation project(':annotation')
+
+    //用来生成java模板代码的框架
+    implementation 'com.squareup:javapoet:1.11.1'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
