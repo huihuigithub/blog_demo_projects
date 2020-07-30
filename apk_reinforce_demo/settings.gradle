@@ -1,0 +1,4 @@
+rootProject.name='apk_reinforce_demo'
+include ':app'
+include ':proxy_core'
+include ':proxy_tools'
