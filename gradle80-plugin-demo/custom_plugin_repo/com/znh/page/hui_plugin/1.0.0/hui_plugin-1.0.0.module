@@ -1,0 +1,82 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.znh.page",
+    "module": "hui_plugin",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hui_plugin-1.0.0.jar",
+          "url": "hui_plugin-1.0.0.jar",
+          "size": 2140,
+          "sha512": "5c1aef460d4fd95d71dbc70342d3a907a03899952cb78d0928cc1cde61d23466106d3d45d3c89acaac02b539193b117069fd4178f68096a579efa410b37a4301",
+          "sha256": "e942029f635372513ad7a506fd5d3d0577c55da8f4acf551875c55212c40d895",
+          "sha1": "7de3d57a261f21f069c1cd3a02341a23dec8067a",
+          "md5": "e7bd40948c96156b187d581c6b5f91ed"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hui_plugin-1.0.0.jar",
+          "url": "hui_plugin-1.0.0.jar",
+          "size": 2140,
+          "sha512": "5c1aef460d4fd95d71dbc70342d3a907a03899952cb78d0928cc1cde61d23466106d3d45d3c89acaac02b539193b117069fd4178f68096a579efa410b37a4301",
+          "sha256": "e942029f635372513ad7a506fd5d3d0577c55da8f4acf551875c55212c40d895",
+          "sha1": "7de3d57a261f21f069c1cd3a02341a23dec8067a",
+          "md5": "e7bd40948c96156b187d581c6b5f91ed"
+        }
+      ]
+    }
+  ]
+}
