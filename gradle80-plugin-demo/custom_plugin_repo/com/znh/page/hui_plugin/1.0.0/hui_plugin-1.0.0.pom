@@ -16,5 +16,11 @@
       <version>1.8.10</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>com.android.tools.build</groupId>
+      <artifactId>gradle</artifactId>
+      <version>8.1.1</version>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
 </project>
