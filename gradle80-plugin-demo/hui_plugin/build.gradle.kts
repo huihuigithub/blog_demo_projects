@@ -7,10 +7,10 @@ plugins {
 gradlePlugin {
     plugins {
         create("pagePlugin") {
-            group = "com.znh.page"
+            group = "com.znh.plugin"
             version = "1.0.0"
-            id = "com.znh.gradle80.page"
-            implementationClass = "com.znh.gradle80.page.PageAnalysisPlugin"
+            id = "com.znh.plugin.page"
+            implementationClass = "com.znh.plugin.page.PageAnalysisPlugin"
         }
     }
 }
@@ -24,5 +24,5 @@ publishing {
 }
 
 dependencies {
-    implementation("com.android.tools.build:gradle:8.1.1")
+    implementation("com.android.tools.build:gradle:8.1.2")
 }
