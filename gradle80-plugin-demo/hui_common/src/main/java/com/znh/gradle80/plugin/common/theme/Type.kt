@@ -1,4 +1,4 @@
-package com.znh.gradle80.plugin.demo.ui.theme
+package com.znh.gradle80.plugin.common.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

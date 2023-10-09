@@ -1,0 +1,103 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.znh.plugin",
+    "module": "hui_plugin",
+    "version": "1.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hui_plugin-1.0.1.jar",
+          "url": "hui_plugin-1.0.1.jar",
+          "size": 24136,
+          "sha512": "bb285ac7c7e9d9d8317fb8e8f2935ebb584ab8dfb4d51001a2612f9735dc57d47b571e44c1d4aa35e9f72a6884b71fd6ee70644e33ed8911db409eef276732c1",
+          "sha256": "64fa149ed240d8ae06461c4d9e9c98b02f276af4692a06b1a6d3f0b8a7b02755",
+          "sha1": "081b58e4086eb95486fe5ebc0e027fe5d3747200",
+          "md5": "096ce2c1edea35bd8962d50a7dbda372"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "8.1.2"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "9.2"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "9.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "hui_plugin-1.0.1.jar",
+          "url": "hui_plugin-1.0.1.jar",
+          "size": 24136,
+          "sha512": "bb285ac7c7e9d9d8317fb8e8f2935ebb584ab8dfb4d51001a2612f9735dc57d47b571e44c1d4aa35e9f72a6884b71fd6ee70644e33ed8911db409eef276732c1",
+          "sha256": "64fa149ed240d8ae06461c4d9e9c98b02f276af4692a06b1a6d3f0b8a7b02755",
+          "sha1": "081b58e4086eb95486fe5ebc0e027fe5d3747200",
+          "md5": "096ce2c1edea35bd8962d50a7dbda372"
+        }
+      ]
+    }
+  ]
+}

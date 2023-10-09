@@ -19,3 +19,6 @@ dependencyResolutionManagement {
 rootProject.name = "gradle80-plugin-demo"
 include(":app")
 include(":hui_plugin")
+include(":hui_aop")
+include(":module1")
+include(":hui_common")

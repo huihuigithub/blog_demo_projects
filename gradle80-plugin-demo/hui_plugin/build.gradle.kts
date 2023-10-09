@@ -12,6 +12,12 @@ gradlePlugin {
             id = "com.znh.plugin.page"
             implementationClass = "com.znh.plugin.page.PageAnalysisPlugin"
         }
+        create("routerPlugin") {
+            group = "com.znh.plugin"
+            version = "1.0.1"
+            id = "com.znh.plugin.router"
+            implementationClass = "com.znh.plugin.router.HuiRouterPlugin"
+        }
     }
 }
 
@@ -25,4 +31,6 @@ publishing {
 
 dependencies {
     implementation("com.android.tools.build:gradle:8.1.2")
+    implementation("org.ow2.asm:asm:9.2")
+    implementation("org.ow2.asm:asm-commons:9.2")
 }

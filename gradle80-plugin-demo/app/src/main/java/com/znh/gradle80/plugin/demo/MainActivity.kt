@@ -1,6 +1,5 @@
 package com.znh.gradle80.plugin.demo
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,7 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.znh.gradle80.plugin.demo.ui.theme.Gradle80plugindemoTheme
+import com.znh.aop.api.HuiRouterApi
+import com.znh.gradle80.plugin.common.HuiConstants
+import com.znh.gradle80.plugin.common.theme.Gradle80plugindemoTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        HuiRouterApi.printRouterPathMap()
     }
 
     @Composable
@@ -35,7 +37,7 @@ class MainActivity : ComponentActivity() {
         Text(
             text = "Hello $name!",
             modifier = modifier.clickable {
-                startActivity(Intent(this, FirstActivity::class.java))
+                HuiRouterApi.routerPath(this, HuiConstants.ROUTER_PATH_FIRST)
             }
         )
     }

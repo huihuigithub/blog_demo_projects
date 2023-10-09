@@ -25,6 +25,7 @@
         </activity>
         <activity android:name=".SecondActivity" />
         <activity android:name=".FirstActivity" />
+        <activity android:name=".DemoActivity" />
     </application>
 
 </manifest>
