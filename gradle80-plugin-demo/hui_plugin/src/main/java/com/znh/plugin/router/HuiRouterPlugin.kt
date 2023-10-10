@@ -15,10 +15,10 @@ class HuiRouterPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         val androidComponents = target.extensions.getByType(AndroidComponentsExtension::class.java)
         androidComponents.onVariants { variant ->
-            val taskProvider = target.tasks.register(
+            val taskProvider = target.tasks.register(//注册HuiRouterTask任务
                 "${variant.name}HuiRouterTask", HuiRouterTask::class.java
             )
-            variant.artifacts.forScope(ScopedArtifacts.Scope.ALL)
+            variant.artifacts.forScope(ScopedArtifacts.Scope.ALL) //扫描所有class
                 .use(taskProvider)
                 .toTransform(
                     type = ScopedArtifact.CLASSES,

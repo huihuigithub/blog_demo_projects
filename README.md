@@ -48,5 +48,5 @@
 
 ##### 10. gradle80-plugin-demo项目
 ```
-项目描述：Gradle8.0插件的使用和自定义
+项目描述：Gradle8.0插件的使用和自定义,Transform的替代方案
 ```

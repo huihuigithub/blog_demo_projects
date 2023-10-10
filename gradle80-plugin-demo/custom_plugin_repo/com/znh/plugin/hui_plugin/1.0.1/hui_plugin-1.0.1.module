@@ -38,11 +38,11 @@
         {
           "name": "hui_plugin-1.0.1.jar",
           "url": "hui_plugin-1.0.1.jar",
-          "size": 24136,
-          "sha512": "bb285ac7c7e9d9d8317fb8e8f2935ebb584ab8dfb4d51001a2612f9735dc57d47b571e44c1d4aa35e9f72a6884b71fd6ee70644e33ed8911db409eef276732c1",
-          "sha256": "64fa149ed240d8ae06461c4d9e9c98b02f276af4692a06b1a6d3f0b8a7b02755",
-          "sha1": "081b58e4086eb95486fe5ebc0e027fe5d3747200",
-          "md5": "096ce2c1edea35bd8962d50a7dbda372"
+          "size": 24137,
+          "sha512": "4630bdf31cf18b5a83da361763d8a1aa1fa658d1c896d696b2ed5e57ec31a09a10e9d91c7f4f804b54eca948695b70c16450ff6b67a71feee2432e316f5cd83b",
+          "sha256": "d3b5e01aab80cbd4326e9d1228a7fc5e16bd3f0644a39ed9f690784cc2f32cac",
+          "sha1": "8aafdba104ed43874db7e0f072e8d7fcf7424703",
+          "md5": "a22f33ef12c37174f21e877a70fadaf5"
         }
       ]
     },
@@ -91,11 +91,11 @@
         {
           "name": "hui_plugin-1.0.1.jar",
           "url": "hui_plugin-1.0.1.jar",
-          "size": 24136,
-          "sha512": "bb285ac7c7e9d9d8317fb8e8f2935ebb584ab8dfb4d51001a2612f9735dc57d47b571e44c1d4aa35e9f72a6884b71fd6ee70644e33ed8911db409eef276732c1",
-          "sha256": "64fa149ed240d8ae06461c4d9e9c98b02f276af4692a06b1a6d3f0b8a7b02755",
-          "sha1": "081b58e4086eb95486fe5ebc0e027fe5d3747200",
-          "md5": "096ce2c1edea35bd8962d50a7dbda372"
+          "size": 24137,
+          "sha512": "4630bdf31cf18b5a83da361763d8a1aa1fa658d1c896d696b2ed5e57ec31a09a10e9d91c7f4f804b54eca948695b70c16450ff6b67a71feee2432e316f5cd83b",
+          "sha256": "d3b5e01aab80cbd4326e9d1228a7fc5e16bd3f0644a39ed9f690784cc2f32cac",
+          "sha1": "8aafdba104ed43874db7e0f072e8d7fcf7424703",
+          "md5": "a22f33ef12c37174f21e877a70fadaf5"
         }
       ]
     }

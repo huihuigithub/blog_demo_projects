@@ -46,10 +46,13 @@ abstract class HuiRouterTask : DefaultTask() {
 
     @TaskAction
     fun taskAction() {
+
+        //输出到output的流
         val jarOutput = JarOutputStream(
             BufferedOutputStream(FileOutputStream(output.get().asFile))
         )
 
+        //遍历扫描class
         allDirectories.get().forEach { directory ->
             directory.asFile.walk().forEach { file ->
                 if (file.isFile) {
@@ -68,9 +71,11 @@ abstract class HuiRouterTask : DefaultTask() {
             }
         }
 
+        //遍历扫描jar
         allJars.get().forEach { jarInputFile ->
             val jarFile = JarFile(jarInputFile.asFile)
             jarFile.entries().iterator().forEach { jarEntry ->
+                //过滤掉非class文件，并去除重复无效的META-INF文件
                 if (jarEntry.name.endsWith(".class") && !jarEntry.name.contains("META-INF")) {
                     if (jarEntry.name.equals("com/znh/aop/api/HuiRouterApi.class")) {
                         routerApiJarFile = jarInputFile.asFile
@@ -87,8 +92,10 @@ abstract class HuiRouterTask : DefaultTask() {
             jarFile.close()
         }
 
+        //对HuiRouterApi进行插桩修改，添加收集到的路由信息
         routerApiJarFile?.let { transformJar(it, jarOutput) }
 
+        //关闭输出流
         jarOutput.close()
     }
 
